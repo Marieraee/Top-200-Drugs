@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cherry Blossom Drug Match 🌸</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- START MENU -->
+
+<div id="menu">
+
+<h1>🌸 Drug Match 🌸</h1>
+
+
+<div class="menuBox">
+
+
+<h2>Select Drug Set</h2>
+
+
+<div>
+
+<button class="setButton" onclick="selectSet('Drugs 1-20', this)">
+Drugs 1-20
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 21-40', this)">
+Drugs 21-40
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 41-60', this)">
+Drugs 41-60
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 61-80', this)">
+Drugs 61-80
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 81-100', this)">
+Drugs 81-100
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 101-120', this)">
+Drugs 101-120
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 121-140', this)">
+Drugs 121-140
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 141-160', this)">
+Drugs 141-160
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 161-180', this)">
+Drugs 161-180
+</button>
+
+<button class="setButton" onclick="selectSet('Drugs 181-200', this)">
+Drugs 181-200
+</button>
+
+</div>
+
+
+
+<h2>Choose Direction</h2>
+
+
+<button 
+class="directionButton"
+onclick="selectDirection('brandToGeneric', this)">
+Brand → Generic
+</button>
+
+
+<button 
+class="directionButton"
+onclick="selectDirection('genericToBrand', this)">
+Generic → Brand
+</button>
+
+
+
+<br>
+
+
+<button 
+class="startButton"
+onclick="startGame()">
+Start Game 🌸
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- GAME SCREEN -->
+
+
+<div id="game">
+
+
+<div class="leftPanel">
+
+
+<h1>🌸</h1>
+
+
+<h2 id="question">
+Drug
+</h2>
+
+
+<div id="score">
+Score: 0
+</div>
+
+
+</div>
+
+
+
+
+<div class="rightPanel">
+
+
+<div id="answers">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- CORRECT ANSWER POPUP -->
+
+
+<div id="correctPopup" class="popup">
+
+
+<h2>
+✓ This is correct!
+</h2>
+
+
+<p>
+Great job!
+</p>
+
+
+
+<p>
+Correct answer:
+<br>
+
+<strong id="correctAnswer"></strong>
+
+</p>
+
+
+
+<button onclick="continueGame()">
+Continue 🌸
+</button>
+
+
+</div>
+
+
+
+
+
+<script src="drugs.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

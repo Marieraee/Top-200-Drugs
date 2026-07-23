@@ -1,0 +1,558 @@
+body {
+
+    margin:0;
+
+    font-family:"Segoe UI", sans-serif;
+
+    background:#2b1b24;
+
+    color:#fff3f7;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+/* START MENU */
+
+
+#menu {
+
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2b1b24,
+    #4a2638
+    );
+
+
+}
+
+
+
+
+
+h1 {
+
+
+    color:#ffd1e2;
+
+    font-size:42px;
+
+}
+
+
+
+
+
+.menuBox {
+
+
+    background:#4a2638;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+
+button {
+
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:12px;
+
+    padding:12px 18px;
+
+    font-size:18px;
+
+    transition:.2s;
+
+
+}
+
+
+
+
+
+button:hover {
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+
+
+/* MENU BUTTONS */
+
+
+.setButton,
+.directionButton {
+
+
+    background:#d98ba8;
+
+    color:#351923;
+
+    margin:6px;
+
+
+}
+
+
+
+
+
+.selected {
+
+
+    outline:
+    4px solid #ffd1e2;
+
+
+    background:#ffb6d2;
+
+
+}
+
+
+
+
+
+
+.startButton {
+
+
+    margin-top:25px;
+
+    background:#ff8fb8;
+
+    color:white;
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+
+/* GAME */
+
+
+
+
+#game {
+
+
+    display:none;
+
+    height:100vh;
+
+
+}
+
+
+
+
+
+
+
+/* LEFT SIDE */
+
+
+.leftPanel {
+
+
+    width:25%;
+
+
+    background:#4a2638;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+#question {
+
+
+    font-size:38px;
+
+
+    text-align:center;
+
+
+    color:#ffd1e2;
+
+
+}
+
+
+
+
+
+#score {
+
+
+    font-size:24px;
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+
+
+
+
+/* RIGHT SIDE */
+
+
+.rightPanel {
+
+
+    width:75%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:25px;
+
+
+}
+
+
+
+
+
+
+
+/* ANSWERS */
+
+
+#answers {
+
+
+    width:100%;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(4,1fr);
+
+
+    grid-template-rows:repeat(5,1fr);
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+
+
+.answerButton {
+
+
+    background:#f7d6e2;
+
+
+    color:#351923;
+
+
+    border:
+    3px solid #d98ba8;
+
+
+    font-size:24px;
+
+
+    min-height:100px;
+
+
+}
+
+
+
+
+
+
+
+.answerButton.correct {
+
+
+    background:#8ee09b;
+
+
+    border-color:#4dbb63;
+
+
+}
+
+
+
+
+
+
+
+.answerButton.wrong {
+
+
+    background:#777;
+
+
+    color:#ddd;
+
+
+    opacity:.5;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* CORRECT POPUP */
+
+
+.popup {
+
+
+    position:fixed;
+
+
+    top:50%;
+
+
+    left:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    background:#4a2638;
+
+
+    color:white;
+
+
+    width:420px;
+
+
+    padding:40px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.7);
+
+
+}
+
+
+
+
+
+.popup h2 {
+
+
+    color:#8ee09b;
+
+
+    font-size:32px;
+
+
+}
+
+
+
+
+
+.popup p {
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+
+#correctAnswer {
+
+
+    font-size:36px;
+
+
+    font-weight:900;
+
+
+    color:#ffd1e2;
+
+
+}
+
+
+
+
+
+#genericAnswer {
+
+
+    font-size:26px;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+.popup button {
+
+
+    margin-top:25px;
+
+
+    background:#ff8fb8;
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+    #game {
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .leftPanel,
+    .rightPanel {
+
+
+        width:100%;
+
+
+    }
+
+
+
+    #answers {
+
+
+        grid-template-columns:repeat(2,1fr);
+
+
+    }
+
+
+}
