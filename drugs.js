@@ -17,7 +17,7 @@ const drugSets = {
 {brand:"Prinivil / Zestril", generic:"lisinopril"},
 {brand:"Synthroid", generic:"levothyroxine"},
 {brand:"Tenormin", generic:"atenolol"},
-{brand:"Vicodin / Lortab", generic:"hydrocodone + APAP"},
+{brand:"Vicodin / Norco", generic:"hydrocodone + APAP"},
 {brand:"Xanax", generic:"alprazolam"},
 {brand:"Zithromax", generic:"azithromycin"},
 {brand:"Zocor", generic:"simvastatin"},
